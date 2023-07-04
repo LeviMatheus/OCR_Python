@@ -1,3 +1,10 @@
 Para executar este arquivo use o comando no terminal
 
+Para obter todo o texto do pdf
 ocr.exe "caminho até o arquivo pdf"
+
+Para obter texto de páginas específicas
+ocr.exe "caminho" --inicio 0 --fim 10
+
+Para checar um padrão existe no texto do pdf
+ocr.exe "caminho" --inicio 0 --fim 10 --padrao \d+
