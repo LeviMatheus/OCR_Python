@@ -1,0 +1,3 @@
+Para executar este arquivo use o comando no terminal
+
+ocr.exe "caminho até o arquivo pdf"
