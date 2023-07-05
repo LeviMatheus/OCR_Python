@@ -4,7 +4,7 @@ from PIL import Image
 from pdf2image import convert_from_path
 import re
 
-pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'.\\Tesseract-OCR\\tesseract.exe'
 
 def extrair_texto_do_pdf(caminho_pdf, inicio=0, fim=None):
     try:
