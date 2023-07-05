@@ -6,7 +6,7 @@ import re
 import poppler
 import os
 
-path_poppler = r'.\\poppler\\Library\\bin'
+path_poppler = r'.\\poppler\\Library\\'
 
 os.environ["PATH"]+=os.pathsep+os.path.join(path_poppler,'bin')
 
