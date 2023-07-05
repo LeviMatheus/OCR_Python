@@ -4,13 +4,18 @@ from PIL import Image
 from pdf2image import convert_from_path
 import re
 import poppler
+import os
+
+path_poppler = r'.\\poppler\\Library\\bin'
+
+os.environ["PATH"]+=os.pathsep+os.path.join(path_poppler,'bin')
 
 pytesseract.pytesseract.tesseract_cmd = r'.\\Tesseract-OCR\\tesseract.exe'
 
 def extrair_texto_do_pdf(caminho_pdf, inicio=0, fim=None):
     try:
         # Converter PDF em imagens
-        imagens = convert_from_path(caminho_pdf,poppler_path=r'.\\poppler\\Library\\bin')
+        imagens = convert_from_path(caminho_pdf,poppler_path=path_poppler)
 
         # Verificar se o fim é maior que o número total de páginas
         if fim is None or fim > len(imagens):
